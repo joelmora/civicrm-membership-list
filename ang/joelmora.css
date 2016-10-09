@@ -1,0 +1,41 @@
+.row {
+    clear: both;
+}
+.filter-col-2,
+.filter-col-5,
+.filter-col-12 {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.filter-col-2 {
+    width: 10%;
+}
+.filter-col-5 {
+    width: 42%;
+}
+.filter-col-12 {
+    width: 99%;
+}
+[class^=filter-col-] .crm-form-entityref {
+    width: 100% !important;
+}
+
+.button-refresh {
+    height: 30px;
+    margin-top: 17px;
+}
+#filter-div {
+    background-color: #f0f0e8;
+    border-radius: 3px;
+    display: flex;
+    margin-bottom: 28px;
+    padding: 5px;
+}
+
+#crm-container .report .even-row td {
+    background-color: #EFEFEF;
+}
+#crm-container .report .odd-row td {
+    background-color: #FAFAFA;
+}

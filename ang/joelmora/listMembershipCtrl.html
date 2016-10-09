@@ -1,0 +1,44 @@
+<h1 crm-page-title>{{ts('Current Membership List')}}</h1>
+
+<div class="crm-container">
+
+    <form name="myForm" crm-ui-id-scope>
+
+        <strong>{{ts('Filter By Membership Start Date')}}</strong>
+        <div id="filter-div" class="row">
+            <div class="filter-col-5">
+                <label for="filter_start_date_from">From:</label>
+                <input id="filter_start_date_from" ng-model="filter_start_date_from"/>
+            </div>
+            <div class="filter-col-5">
+                <label for="filter_start_date_from">To:</label>
+                <input id="filter_start_date_to" ng-model="filter_start_date_to"/>
+            </div>
+            <div class="filter-col-2">
+                <button class="button-refresh" ng-click="clearFilters()" title="Clear Filters">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <table class="report">
+            <tr>
+                <th>{{ts('Contact')}}</th>
+                <th>{{ts('Membership')}}</th>
+                <th>{{ts('Member Since')}}</th>
+                <th>{{ts('Start Date')}}</th>
+                <th>{{ts('End Date')}}</th>
+                <th>{{ts('Source')}}</th>
+            </tr>
+            <tr ng-repeat="(i,record) in membershipList.values | isBetween:filter_start_date_from:filter_start_date_to" ng-class-odd="'odd-row'" ng-class-even="'even-row'">
+                <td>{{record['api.Contact.getsingle'].display_name}}</td>
+                <td>{{record.membership_name}}</td>
+                <td>{{record.join_date | date}}</td>
+                <td>{{record.start_date | date}}</td>
+                <td>{{record.end_date | date}}</td>
+                <td>{{record.source}}</td>
+            </tr>
+        </table>
+
+    </form>
+</div>

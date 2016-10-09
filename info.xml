@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension key="com.compucorp.joelmora" type="module">
+  <file>joelmora</file>
+  <name>Joel Mora - Compucorp Task 2</name>
+  <description>Extension that creates a new page in CiviCRM that displays a list of the current memberships.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Joel Mora</author>
+    <email>joelmora16@gmail.com</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">http://joelmora.ofiserprof.com/drupal</url>
+    <url desc="Documentation"></url>
+    <url desc="Support"></url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2016-10-06</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>4.2</ver>
+  </compatibility>
+  <comments></comments>
+  <civix>
+    <namespace>CRM/Joelmora</namespace>
+  </civix>
+</extension>
